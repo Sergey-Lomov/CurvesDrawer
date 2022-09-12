@@ -11,6 +11,26 @@
 		67C3906728CDE16D00784D68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3906628CDE16D00784D68 /* ContentView.swift */; };
 		67C3906928CDE16F00784D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C3906828CDE16F00784D68 /* Assets.xcassets */; };
 		67C3906C28CDE16F00784D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C3906B28CDE16F00784D68 /* Preview Assets.xcassets */; };
+		67C3907328CDEF7800784D68 /* ComplexCurveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907228CDEF7800784D68 /* ComplexCurveShape.swift */; };
+		67C3907628CDEF9000784D68 /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907428CDEF9000784D68 /* BezierCurve.swift */; };
+		67C3907728CDEF9000784D68 /* ComplexCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907528CDEF9000784D68 /* ComplexCurve.swift */; };
+		67C3907A28CDEFB000784D68 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907928CDEFB000784D68 /* Path.swift */; };
+		67C3907C28CDEFCE00784D68 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907B28CDEFCE00784D68 /* CGFloat.swift */; };
+		67C3908028CDEFE500784D68 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907D28CDEFE500784D68 /* CGRect.swift */; };
+		67C3908128CDEFE500784D68 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907E28CDEFE500784D68 /* CGSize.swift */; };
+		67C3908228CDEFE500784D68 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3907F28CDEFE500784D68 /* CGPoint.swift */; };
+		67C3908528CDF00300784D68 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3908428CDF00300784D68 /* Line.swift */; };
+		67C3908728CDF01E00784D68 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3908628CDF01E00784D68 /* Array.swift */; };
+		67C3908B28CDF03F00784D68 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3908928CDF03F00784D68 /* Closures.swift */; };
+		67C3908C28CDF03F00784D68 /* IdEqutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3908A28CDF03F00784D68 /* IdEqutable.swift */; };
+		67C3908E28CDF05800784D68 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3908D28CDF05800784D68 /* Math.swift */; };
+		67C3909128CF2AF400784D68 /* DrawableCurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909028CF2AF400784D68 /* DrawableCurvesView.swift */; };
+		67C3909328CF2B1B00784D68 /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909228CF2B1B00784D68 /* EnvironmentKeys.swift */; };
+		67C3909528CF2B3300784D68 /* DrawableCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909428CF2B3300784D68 /* DrawableCurve.swift */; };
+		67C3909728CF2B9200784D68 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909628CF2B9200784D68 /* Comparable.swift */; };
+		67C3909928CF2BB200784D68 /* CenteredGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909828CF2BB200784D68 /* CenteredGeometryReader.swift */; };
+		67C3909B28CF2BE200784D68 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909A28CF2BE200784D68 /* View.swift */; };
+		67C3909E28CF93A700784D68 /* DrawingProgressModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909D28CF93A700784D68 /* DrawingProgressModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +39,26 @@
 		67C3906628CDE16D00784D68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67C3906828CDE16F00784D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C3906B28CDE16F00784D68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67C3907228CDEF7800784D68 /* ComplexCurveShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexCurveShape.swift; sourceTree = "<group>"; };
+		67C3907428CDEF9000784D68 /* BezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierCurve.swift; sourceTree = "<group>"; };
+		67C3907528CDEF9000784D68 /* ComplexCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexCurve.swift; sourceTree = "<group>"; };
+		67C3907928CDEFB000784D68 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		67C3907B28CDEFCE00784D68 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		67C3907D28CDEFE500784D68 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		67C3907E28CDEFE500784D68 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		67C3907F28CDEFE500784D68 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		67C3908428CDF00300784D68 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		67C3908628CDF01E00784D68 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		67C3908928CDF03F00784D68 /* Closures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		67C3908A28CDF03F00784D68 /* IdEqutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdEqutable.swift; sourceTree = "<group>"; };
+		67C3908D28CDF05800784D68 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		67C3909028CF2AF400784D68 /* DrawableCurvesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableCurvesView.swift; sourceTree = "<group>"; };
+		67C3909228CF2B1B00784D68 /* EnvironmentKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
+		67C3909428CF2B3300784D68 /* DrawableCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableCurve.swift; sourceTree = "<group>"; };
+		67C3909628CF2B9200784D68 /* Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		67C3909828CF2BB200784D68 /* CenteredGeometryReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredGeometryReader.swift; sourceTree = "<group>"; };
+		67C3909A28CF2BE200784D68 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		67C3909D28CF93A700784D68 /* DrawingProgressModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingProgressModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +75,11 @@
 		67C3905828CDE16D00784D68 = {
 			isa = PBXGroup;
 			children = (
+				67C3909C28CF939500784D68 /* Modifiers */,
+				67C3908F28CDF06E00784D68 /* Views */,
+				67C3908828CDF02E00784D68 /* Utils */,
+				67C3908328CDEFF400784D68 /* Geometry */,
+				67C3907828CDEFA800784D68 /* Extensions */,
 				67C3906328CDE16D00784D68 /* CurvesDrawer */,
 				67C3906228CDE16D00784D68 /* Products */,
 			);
@@ -65,6 +110,61 @@
 				67C3906B28CDE16F00784D68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67C3907828CDEFA800784D68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67C3909A28CF2BE200784D68 /* View.swift */,
+				67C3908628CDF01E00784D68 /* Array.swift */,
+				67C3907F28CDEFE500784D68 /* CGPoint.swift */,
+				67C3907D28CDEFE500784D68 /* CGRect.swift */,
+				67C3907E28CDEFE500784D68 /* CGSize.swift */,
+				67C3907B28CDEFCE00784D68 /* CGFloat.swift */,
+				67C3909628CF2B9200784D68 /* Comparable.swift */,
+				67C3907928CDEFB000784D68 /* Path.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67C3908328CDEFF400784D68 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				67C3909428CF2B3300784D68 /* DrawableCurve.swift */,
+				67C3907428CDEF9000784D68 /* BezierCurve.swift */,
+				67C3907528CDEF9000784D68 /* ComplexCurve.swift */,
+				67C3908428CDF00300784D68 /* Line.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		67C3908828CDF02E00784D68 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				67C3909228CF2B1B00784D68 /* EnvironmentKeys.swift */,
+				67C3908928CDF03F00784D68 /* Closures.swift */,
+				67C3908A28CDF03F00784D68 /* IdEqutable.swift */,
+				67C3908D28CDF05800784D68 /* Math.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		67C3908F28CDF06E00784D68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67C3909828CF2BB200784D68 /* CenteredGeometryReader.swift */,
+				67C3909028CF2AF400784D68 /* DrawableCurvesView.swift */,
+				67C3907228CDEF7800784D68 /* ComplexCurveShape.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67C3909C28CF939500784D68 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				67C3909D28CF93A700784D68 /* DrawingProgressModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +237,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C3909E28CF93A700784D68 /* DrawingProgressModifier.swift in Sources */,
+				67C3907728CDEF9000784D68 /* ComplexCurve.swift in Sources */,
 				67C3906728CDE16D00784D68 /* ContentView.swift in Sources */,
+				67C3907C28CDEFCE00784D68 /* CGFloat.swift in Sources */,
 				67C3906528CDE16D00784D68 /* CurvesDrawerApp.swift in Sources */,
+				67C3907628CDEF9000784D68 /* BezierCurve.swift in Sources */,
+				67C3909B28CF2BE200784D68 /* View.swift in Sources */,
+				67C3908C28CDF03F00784D68 /* IdEqutable.swift in Sources */,
+				67C3907A28CDEFB000784D68 /* Path.swift in Sources */,
+				67C3908B28CDF03F00784D68 /* Closures.swift in Sources */,
+				67C3909128CF2AF400784D68 /* DrawableCurvesView.swift in Sources */,
+				67C3909528CF2B3300784D68 /* DrawableCurve.swift in Sources */,
+				67C3907328CDEF7800784D68 /* ComplexCurveShape.swift in Sources */,
+				67C3908128CDEFE500784D68 /* CGSize.swift in Sources */,
+				67C3908228CDEFE500784D68 /* CGPoint.swift in Sources */,
+				67C3909728CF2B9200784D68 /* Comparable.swift in Sources */,
+				67C3908728CDF01E00784D68 /* Array.swift in Sources */,
+				67C3908528CDF00300784D68 /* Line.swift in Sources */,
+				67C3909928CF2BB200784D68 /* CenteredGeometryReader.swift in Sources */,
+				67C3908028CDEFE500784D68 /* CGRect.swift in Sources */,
+				67C3908E28CDF05800784D68 /* Math.swift in Sources */,
+				67C3909328CF2B1B00784D68 /* EnvironmentKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
