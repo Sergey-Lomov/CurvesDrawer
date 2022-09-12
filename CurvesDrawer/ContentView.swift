@@ -21,7 +21,7 @@ struct ContentView: View {
         CenteredGeometryReader {
             backColor
                 .ignoresSafeArea(.all)
-            DrawableCurvesView(elements: curves)
+            DrawableCurvesView(elements: curves, undercolor: backColor)
                 .opacity(opacity)
                 .animation(nil, value: opacity)
                 .drawingProgress(progress)
@@ -37,9 +37,11 @@ struct ContentView: View {
     }
 
     private var curves: [DrawableCurve] {
-        let curve = BezierCurve(x0: -0.5, y0: -0.5, x1: -0.5, y1: 0.5, x2: 0.5, y2: -0.5, x3: 0.5, y3: 0.5)
-        let drawable = DrawableCurve(curve: curve, startAt: 0, finishAt: 1)
-        return [drawable]
+        let curve1 = BezierCurve(x0: -0.5, y0: -0.5, x1: -0.5, y1: 0.5, x2: 0.5, y2: -0.5, x3: 0.5, y3: 0.5)
+        let curve2 = BezierCurve(x0: -0.5, y0: -0.5, x1: 0.5, y1: -0.5, x2: -0.5, y2: 0.5, x3: 0.5, y3: 0.5)
+        let drawable1 = DrawableCurve(curve: curve1, startAt: 0, finishAt: 1)
+        let drawable2 = DrawableCurve(curve: curve2, startAt: 0, finishAt: 1)
+        return [drawable1, drawable2]
     }
 }
 
