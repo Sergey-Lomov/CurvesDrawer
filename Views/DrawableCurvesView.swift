@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DrawableCurvesView: View {
 
-    private let understrokeMult: CGFloat = 2
-    private let understrokeBorder: CGFloat = 0.05
+    private let understrokeMult: CGFloat = 1.2
+    private let understrokeBorder: CGFloat = 0.15
 
     let elements: [DrawableCurve]
     var lineCap: CGLineCap = .round
@@ -21,6 +21,13 @@ struct DrawableCurvesView: View {
     var body: some View {
         CenteredGeometryReader { geometry in
             ForEach(elements, id: \.id) { element in
+//                ForEach(element.understrokes, id: \.self) { understroke in
+//                    let finish = min(understroke.from, relativeProgress(element))
+//                    Path(curve: element.curve, geometry: geometry)
+//                        .trimmedPath(from: understroke.0, to: finish)
+//                        .stroke(style: understrokeStyle(element))
+//                }.foregroundColor(undercolor)
+
                 Path(curve: element.curve, geometry: geometry)
                     .trimmedPath(from: understrokeBorder, to: undestrokeProgress(element))
                     .stroke(style: understrokeStyle(element))
@@ -50,6 +57,6 @@ struct DrawableCurvesView: View {
 
     private func understrokeStyle(_ element: DrawableCurve) -> StrokeStyle {
         let width = element.widthMult * drawingWidth * understrokeMult
-        return StrokeStyle(lineWidth: width, lineCap: lineCap)
+        return StrokeStyle(lineWidth: width, lineCap: .butt)
     }
 }

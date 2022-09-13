@@ -8,12 +8,18 @@
 import Foundation
 import CoreGraphics
 
+//struct UnderstrokeArea: Hashable {
+//    let from: CGFloat
+//    let to: CGFloat
+//}
+
 struct DrawableCurve {
     let id = UUID().uuidString
     var curve: BezierCurve
     let startAt: CGFloat
     let finishAt: CGFloat
     let widthMult: CGFloat
+//    var understrokes = [UnderstrokeArea]()
 
     init(curve: BezierCurve, startAt: CGFloat, finishAt: CGFloat, widthMult: CGFloat = 1) {
         self.curve = curve
@@ -24,6 +30,18 @@ struct DrawableCurve {
 
     func scaled(_ scale: CGFloat) -> DrawableCurve {
         DrawableCurve(curve: curve.scaled(scale), startAt: startAt, finishAt: finishAt, widthMult: widthMult)
+    }
+//
+//    mutating func addUnderstroke(from: CGFloat, to: CGFloat) {
+//        understrokes.append(.init(from: from, to: to))
+//    }
+
+    func timeScaled(_ scale: CGFloat) -> DrawableCurve {
+        DrawableCurve(curve: curve, startAt: startAt * scale, finishAt: finishAt * scale, widthMult: widthMult)
+    }
+
+    func timeTranslated(_ delta: CGFloat) -> DrawableCurve {
+        DrawableCurve(curve: curve, startAt: startAt + delta, finishAt: finishAt + delta, widthMult: widthMult)
     }
 }
 

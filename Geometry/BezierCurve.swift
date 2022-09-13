@@ -138,6 +138,32 @@ struct BezierCurve {
         return BezierCurve(points: [p0, p1m, p2m, p3])
     }
 
+    func mirrored(by center: CGPoint) -> BezierCurve {
+        return rotated(center: center, angle: .pi)
+    }
+
+    func rotated(center: CGPoint = .zero, angle: CGFloat) -> BezierCurve {
+        guard self != .zero else { return .zero }
+        let newPoints = points.map {
+            let newAngle = Math.angle(p1: $0, p2: center) + angle
+            let radius = center.distanceTo($0)
+            return CGPoint(center: center, angle: newAngle, radius: radius)
+        }
+        return .init(points: newPoints)
+    }
+
+    func smoothed(mult1: CGFloat, mult2: CGFloat) -> BezierCurve {
+        let c1_angle = Math.angle(p1: p1, p2: p0)
+        let c1_distance = p0.distanceTo(p1)
+        let p1 = CGPoint(center: p0, angle: c1_angle, radius: c1_distance * mult1)
+
+        let c2_angle = Math.angle(p1: p2, p2: p3)
+        let c2_distance = p3.distanceTo(p2)
+        let p2 = CGPoint(center: p3, angle: c2_angle, radius: c2_distance * mult2)
+
+        return .init(points: [p0, p1, p2, p3])
+    }
+
     func randomControlsCurve(maxDelta: CGFloat) -> BezierCurve {
         let p1r = p1.randomPoint(maxDelta: maxDelta)
         let p2r = p2.randomPoint(maxDelta: maxDelta)

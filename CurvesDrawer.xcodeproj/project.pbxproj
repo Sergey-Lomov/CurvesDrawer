@@ -31,6 +31,7 @@
 		67C3909928CF2BB200784D68 /* CenteredGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909828CF2BB200784D68 /* CenteredGeometryReader.swift */; };
 		67C3909B28CF2BE200784D68 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909A28CF2BE200784D68 /* View.swift */; };
 		67C3909E28CF93A700784D68 /* DrawingProgressModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909D28CF93A700784D68 /* DrawingProgressModifier.swift */; };
+		67C390A028D0ECB500784D68 /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3909F28D0ECB500784D68 /* LineSegment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		67C3909828CF2BB200784D68 /* CenteredGeometryReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredGeometryReader.swift; sourceTree = "<group>"; };
 		67C3909A28CF2BE200784D68 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		67C3909D28CF93A700784D68 /* DrawingProgressModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingProgressModifier.swift; sourceTree = "<group>"; };
+		67C3909F28D0ECB500784D68 /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				67C3907428CDEF9000784D68 /* BezierCurve.swift */,
 				67C3907528CDEF9000784D68 /* ComplexCurve.swift */,
 				67C3908428CDF00300784D68 /* Line.swift */,
+				67C3909F28D0ECB500784D68 /* LineSegment.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				67C3909728CF2B9200784D68 /* Comparable.swift in Sources */,
 				67C3908728CDF01E00784D68 /* Array.swift in Sources */,
 				67C3908528CDF00300784D68 /* Line.swift in Sources */,
+				67C390A028D0ECB500784D68 /* LineSegment.swift in Sources */,
 				67C3909928CF2BB200784D68 /* CenteredGeometryReader.swift in Sources */,
 				67C3908028CDEFE500784D68 /* CGRect.swift in Sources */,
 				67C3908E28CDF05800784D68 /* Math.swift in Sources */,
