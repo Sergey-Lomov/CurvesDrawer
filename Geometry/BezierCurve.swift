@@ -78,6 +78,11 @@ struct BezierCurve {
         }
     }
 
+    func isLine() -> Bool {
+        let line = Line(p1: p0, p2: p3)
+        return line.contains(p1) && line.contains(p2)
+    }
+
     mutating func setPoint(_ point: ControlPoint, newValue: CGPoint) {
         switch point {
         case .p0: p0 = newValue
@@ -144,11 +149,7 @@ struct BezierCurve {
 
     func rotated(center: CGPoint = .zero, angle: CGFloat) -> BezierCurve {
         guard self != .zero else { return .zero }
-        let newPoints = points.map {
-            let newAngle = Math.angle(p1: $0, p2: center) + angle
-            let radius = center.distanceTo($0)
-            return CGPoint(center: center, angle: newAngle, radius: radius)
-        }
+        let newPoints = points.map { $0.rotated(center: center, angle: angle) }
         return .init(points: newPoints)
     }
 

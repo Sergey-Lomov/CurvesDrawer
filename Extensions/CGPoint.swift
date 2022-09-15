@@ -22,8 +22,14 @@ extension CGPoint {
         self.init(x: x, y: y)
     }
 
-    func mirrored(point: CGPoint = .zero) -> CGPoint {
-         CGPoint(x: 2 * point.x - self.x, y: 2 * point.y - self.y)
+    func mirrored(center: CGPoint = .zero) -> CGPoint {
+         CGPoint(x: 2 * center.x - self.x, y: 2 * center.y - self.y)
+    }
+
+    func rotated(center: CGPoint = .zero, angle: CGFloat) -> CGPoint {
+        let newAngle = Math.angle(p1: self, p2: center) + angle
+        let radius = center.distanceTo(self)
+        return CGPoint(center: center, angle: newAngle, radius: radius)
     }
 
     func scaled(_ geometry: GeometryProxy) -> CGPoint {

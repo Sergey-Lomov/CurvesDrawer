@@ -58,4 +58,15 @@ struct Line {
     func point(x: CGFloat) -> CGPoint {
         return CGPoint(x: x, y: y(x: x))
     }
+
+    func contains(_ point: CGPoint) -> Bool {
+        switch type {
+        case .vertical(let x):
+            return point.x == x
+        case .horizontal(let y):
+            return point.y == y
+        case .common:
+            return y(x: point.x) == point.y
+        }
+    }
 }
