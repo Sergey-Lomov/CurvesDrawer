@@ -17,6 +17,13 @@ class CurvesThreadBuildingContext {
         return currentBundle.last?.curve ?? curves.last?.curve
     }
 
+    var allCurves: [ThreadCurve] {
+        var allCurves = [ThreadCurve]()
+        allCurves.append(contentsOf: curves)
+        allCurves.append(contentsOf: currentBundle)
+        return allCurves
+    }
+
     func setName(_ name: String) {
         self.name = name
     }
@@ -56,26 +63,28 @@ class CurvesThreadBuildingContext {
         finalizeBundle(finishAt: timestamp)
     }
 
-    func addMirroredCurves(center: CGPoint = .zero) {
-        var existCurves = [ThreadCurve]()
-        existCurves.append(contentsOf: curves)
-        existCurves.append(contentsOf: currentBundle)
+    func addSelfMirroredCurves(reversion: Bool) {
+        let mirrored = allCurves.map { threadCurve in
+            threadCurve.transformed {
+                reversion ? $0.mirrored().reversed() : $0.mirrored()
+            }
+        }
+        currentBundle.append(contentsOf: mirrored)
+    }
 
-        let mirrored = existCurves.map { threadCurve in
+    func addMirroredCurves(center: CGPoint = .zero) {
+        let mirrored = allCurves.map { threadCurve in
             threadCurve.transformed { $0.mirrored(by: center) }
         }
         currentBundle.append(contentsOf: mirrored)
     }
 
-    func addRotatedCurves(center: CGPoint = .zero, angle: CGFloat) {
-        var existCurves = [ThreadCurve]()
-        existCurves.append(contentsOf: curves)
-        existCurves.append(contentsOf: currentBundle)
-
-        let mirrored = existCurves.map { threadCurve in
+    func addRotatedCurves(amount: Int?, center: CGPoint = .zero, angle: CGFloat) {
+        let source = allCurves.suffix(amount ?? allCurves.count)
+        let rotated = source.map { threadCurve in
             threadCurve.transformed { $0.rotated(center: center, angle: angle) }
         }
-        currentBundle.append(contentsOf: mirrored)
+        currentBundle.append(contentsOf: rotated)
     }
 
     func applyCrossings(_ crossings: [CurveCrossing]){

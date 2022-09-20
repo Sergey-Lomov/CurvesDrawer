@@ -27,6 +27,7 @@ extension CGPoint {
     }
 
     func rotated(center: CGPoint = .zero, angle: CGFloat) -> CGPoint {
+        guard self != center else { return self }
         let newAngle = Math.angle(p1: self, p2: center) + angle
         let radius = center.distanceTo(self)
         return CGPoint(center: center, angle: newAngle, radius: radius)

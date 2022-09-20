@@ -14,6 +14,19 @@ protocol CurvesThreadBuildingCommand {
 struct TB {
 
     // MARK: Thread commands group
+    struct Utils {
+        struct Group: CurvesThreadBuildingCommand {
+            static let empty = Group(subcommands: [])
+
+            let subcommands: [CurvesThreadBuildingCommand]
+
+            func execute(in context: inout CurvesThreadBuildingContext) {
+                subcommands.forEach { $0.execute(in: &context) }
+            }
+        }
+    }
+
+    // MARK: Thread commands group
     struct Thread {
 
         struct Name: CurvesThreadBuildingCommand {
@@ -108,17 +121,27 @@ struct TB {
             }
         }
 
+        struct SelfMirrored: CurvesThreadBuildingCommand {
+            let reversion: Bool
+
+            func execute(in context: inout CurvesThreadBuildingContext) {
+                context.addSelfMirroredCurves(reversion: reversion)
+            }
+        }
+
         struct Rotated: CurvesThreadBuildingCommand {
+            let amount: Int?
             let center: CGPoint
             let angle: CGFloat
 
-            init(center: CGPoint = .zero, angle: CGFloat) {
+            init(last amount: Int? = nil, center: CGPoint = .zero, angle: CGFloat) {
+                self.amount = amount
                 self.center = center
                 self.angle = angle
             }
 
             func execute(in context: inout CurvesThreadBuildingContext) {
-                context.addRotatedCurves(center: center, angle: angle)
+                context.addRotatedCurves(amount: amount, center: center, angle: angle)
             }
         }
     }

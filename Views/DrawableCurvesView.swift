@@ -36,6 +36,7 @@ struct DrawableCurvesView: View {
                 Path(curve: element.curve, geometry: geometry)
                     .trimmedPath(from: 0, to: relativeProgress(element))
                     .stroke(style: strokeStyle(element))
+                    .animation(nil, value: relativeProgress(element))
             }
         }
     }

@@ -8,7 +8,12 @@
 import Foundation
 
 class DrawgramBuildingContext {
+    var rawCurves: [DrawableCurve] = []
     var threads: [CurvesThread] = []
+
+    func addRawCurve(_ curve: DrawableCurve) {
+        rawCurves.append(curve)
+    }
 
     func addThread(_ thread: CurvesThread) {
         threads.append(thread)

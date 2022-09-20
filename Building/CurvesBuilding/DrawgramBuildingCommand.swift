@@ -11,12 +11,40 @@ protocol DrawgramBuildingCommand {
     func execute(in context: inout DrawgramBuildingContext)
 }
 
-struct CB {
+struct DB {
+    struct Group: DrawgramBuildingCommand {
+        let subcommands: [DrawgramBuildingCommand]
+
+        func execute(in context: inout DrawgramBuildingContext) {
+            subcommands.forEach { $0.execute(in: &context) }
+        }
+    }
+
+    struct AddRawCurve: DrawgramBuildingCommand {
+        let curve: DrawableCurve
+
+        func execute(in context: inout DrawgramBuildingContext) {
+            context.addRawCurve(curve)
+        }
+    }
+
     struct AddThread: DrawgramBuildingCommand {
         @CurvesThreadBuilder let builder: () -> CurvesThread
 
         func execute(in context: inout DrawgramBuildingContext) {
             context.addThread(builder())
+        }
+    }
+
+    struct AddThreadDirectly: DrawgramBuildingCommand {
+        let thread: CurvesThread
+
+        init(_ thread: CurvesThread) {
+            self.thread = thread
+        }
+
+        func execute(in context: inout DrawgramBuildingContext) {
+            context.addThread(thread)
         }
     }
 
