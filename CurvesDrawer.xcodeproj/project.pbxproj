@@ -39,6 +39,7 @@
 		67C390AD28D13ADB00784D68 /* CurvesThreadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C390AC28D13ADB00784D68 /* CurvesThreadBuilder.swift */; };
 		67C390AF28D13B2D00784D68 /* CurvesThreadBuildingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C390AE28D13B2D00784D68 /* CurvesThreadBuildingCommand.swift */; };
 		67C390BF28D2940500784D68 /* CurvesThreadBuildingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C390BE28D2940500784D68 /* CurvesThreadBuildingContext.swift */; };
+		67FFE93D28D9EB2C0002B4DF /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FFE93C28D9EB2C0002B4DF /* ViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		67C390AC28D13ADB00784D68 /* CurvesThreadBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvesThreadBuilder.swift; sourceTree = "<group>"; };
 		67C390AE28D13B2D00784D68 /* CurvesThreadBuildingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvesThreadBuildingCommand.swift; sourceTree = "<group>"; };
 		67C390BE28D2940500784D68 /* CurvesThreadBuildingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvesThreadBuildingContext.swift; sourceTree = "<group>"; };
+		67FFE93C28D9EB2C0002B4DF /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				67C3907B28CDEFCE00784D68 /* CGFloat.swift */,
 				67C3909628CF2B9200784D68 /* Comparable.swift */,
 				67C3907928CDEFB000784D68 /* Path.swift */,
+				67FFE93C28D9EB2C0002B4DF /* ViewBuilder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				67C3909928CF2BB200784D68 /* CenteredGeometryReader.swift in Sources */,
 				67C3908028CDEFE500784D68 /* CGRect.swift in Sources */,
 				67C390A528D0FA8900784D68 /* DrawgramBuildingCommand.swift in Sources */,
+				67FFE93D28D9EB2C0002B4DF /* ViewBuilder.swift in Sources */,
 				67C390AF28D13B2D00784D68 /* CurvesThreadBuildingCommand.swift in Sources */,
 				67C390A728D1167900784D68 /* DrawgramBuildingContext.swift in Sources */,
 				67C390AB28D1348D00784D68 /* CurvesThread.swift in Sources */,
